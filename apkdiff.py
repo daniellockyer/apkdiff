@@ -37,9 +37,6 @@ def main():
     parser.add_argument('-m', '--meld', action='store_true', help='Open meld to compare directories after.')
     parser.add_argument('-o', '--output', default="/tmp/apkdiff/", help='The location to output the extracted files to.')
     
-    # TEMP
-    parser.add_argument('-d', '--done', action='store_true', help='TEMP: Folders already created.')
-    
     global args
     args = parser.parse_args()
 
@@ -58,15 +55,14 @@ def main():
     at1 = temp1 + at
     at2 = temp2 + at
 
-    if not args.done:
-        folderExists(temp1, True)
-        folderExists(temp2, True)
+    folderExists(temp1, True)
+    folderExists(temp2, True)
 
-        extract(args.apk1, temp1)
-        extract(args.apk2, temp2)
+    extract(args.apk1, temp1)
+    extract(args.apk2, temp2)
 
-        apktoolit(args.apk1, at1)
-        apktoolit(args.apk2, at2)
+    apktoolit(args.apk1, at1)
+    apktoolit(args.apk2, at2)
 
     compare(at1, at2)
 
