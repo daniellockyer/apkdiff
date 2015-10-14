@@ -1,8 +1,6 @@
 apkdiff
 ===
 
-## WARNING - HACKED UP - WILL FIX SOON
-
 Diff two version of an APK. Useful for seeing what changes have been made after an update.
 
 The output is currently in a 'git diff'-style but there are plans for HTML reports.
