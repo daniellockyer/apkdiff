@@ -67,8 +67,11 @@ def main():
     compare(at1, at2)
 
     # Remove all the stuff we have created.
-    if args.cleanup and os.path.exists(output):
-        shutil.rmtree(output)
+    if args.cleanup and os.path.exists(temp1):
+        shutil.rmtree(temp1)
+
+    if args.cleanup and os.path.exists(temp2):
+        shutil.rmtree(temp2)
 
     if args.meld:
         call(["meld", at1, at2])
