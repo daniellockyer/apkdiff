@@ -1,0 +1,11 @@
+[package]
+name = "apkdiff"
+version = "0.1.0"
+authors = ["Daniel Lockyer <hi@daniellockyer.com>"]
+edition = "2018"
+
+[dependencies]
+dexd = "0.1"
+structopt = "0.2"
+tempfile = "3"
+zip = "0.5"
