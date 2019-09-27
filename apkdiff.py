@@ -78,7 +78,7 @@ def main():
 
 def apktoolit(file, dir):
     print("Running apktool against '" + format(file, bcolors.OKBLUE) + "'")
-    call(["apktool", "d", "-o", dir, file], stdout=open(os.devnull, 'w'), stderr=STDOUT)
+    call(["apktool", "d", "--no-debug-info", "-o", dir, file], stdout=open(os.devnull, 'w'), stderr=STDOUT)
     print("[" + format("OK", bcolors.OKGREEN) + "]")
 
 def compare(folder1, folder2):
