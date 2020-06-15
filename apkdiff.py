@@ -120,7 +120,7 @@ def tidy(lines):
     print(sorted)
 
 def reader(file):
-    f = open(file, 'r')
+    f = open(file, 'r', encoding='utf8', errors='ignore')
     data = f.read()
     f.close()
     return data
