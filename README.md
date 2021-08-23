@@ -7,4 +7,4 @@ The output is currently in a 'git diff'-style but there are plans for HTML repor
 
 Clone the repo and run `python apkdiff.py -h` to see all the options.
 
-![Example Display](screenshot1.png)
+![image](https://user-images.githubusercontent.com/964245/130408874-28b8896f-7e92-42e2-8d06-92938cd44ac2.png)
