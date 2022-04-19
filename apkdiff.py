@@ -12,7 +12,6 @@ import argparse
 import difflib
 import tempfile
 
-at = "at/"
 ignore = ".*(align|apktool.yml|pak|MF|RSA|SF|bin|so)"
 count = 0
 args = None
@@ -40,7 +39,7 @@ def main():
     parser.add_argument('-m', '--meld', action='store_true', help='Open meld to compare directories after.')
     parser.add_argument('-o', '--output', default=os.path.join(tempfile.gettempdir(), 'apkdiff'), help='The location to output the extracted files to.')
     parser.add_argument('-u', '--unique', action='store_true', help='By default, only differences in common files are printed. If -u is enabled, unique files are printed too')
-
+    
     global args
     args = parser.parse_args()
 
